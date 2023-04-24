@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,11 +12,11 @@ body {
   text-align: right;
 }
 
-.header img {
+.header_image {
   width: 100%;
 }
 
-.header .more-inf {
+.header_info {
   font-family: fantasy, cursive;
 }
 
@@ -34,13 +34,14 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.tasks__edit,
+.tasks__name {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task_wrapper {
+.tasks__wrapper {
   display: flex;
 }
 
@@ -55,11 +56,13 @@ h3 {
 }
 
 input,
-button {
+.button,
+.tasks__change {
   outline: none;
 }
 
-button {
+.button,
+.tasks__change {
   background: none;
   border: 0px;
   color: #888;
@@ -69,7 +72,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover,
+.tasks__change:hover {
   color: #3a3A3a;
 }
 
@@ -141,13 +145,13 @@ li > input[type="text"] {
   width: 226px;
 }
 
-.delete img {
+.button__remove {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete img:hover {
+.button__remove:hover {
   transform: rotateZ(0);
 }
 
@@ -162,11 +166,11 @@ ul li input[type=text] {
   display: none;
 }
 
-.edit-mode input[type=text] {
+.task_edit-mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode label {
+.task_edit-mode label {
   display: none;
 }
